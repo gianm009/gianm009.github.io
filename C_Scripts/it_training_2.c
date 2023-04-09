@@ -45,7 +45,7 @@ bool IsValidIpAddress(char *IpAddress)
             return false;
         }
 
-        // Transform ptr into a interger
+        // Transform ptr into a integer
         num = atoi(ptr);
 
         if (num < 0 || num > 255)
@@ -71,7 +71,7 @@ void CheckForValidIp()
 {
     system("cls");
 
-    // 16 is the max cuantity of char (including "\0")
+    // 16 is the max quantity of char (including "\0")
     char IpAddress[16];
 
     printf("Enter IP address: ");
@@ -90,11 +90,11 @@ void CheckForValidIp()
 void ToAscii()
 {
     printf("Type a number between 0 and 255 to convert it to ASCII: ");
-    int interger;
-    scanf(" %i", &interger);
-    if (interger >= 0 && interger <= 255)
+    int integer;
+    scanf(" %i", &integer);
+    if (integer >= 0 && integer <= 255)
     {
-        char asciichar = interger;
+        char asciichar = integer;
         printf("This number represents: %c \n\n", asciichar);
     }
     else
@@ -106,7 +106,7 @@ void ToAscii()
 // Function3: Random number between 1 - 6
 void random_number()
 {
-    //Inicialice method rand and disable the cache of the time for the claculus
+    //Initialize method rand and disable the cache of the time for the calculus
     srand(time(NULL));
     int random = rand() % 6 + 1;
     printf("Your lucky number is %i\n\n", random);
@@ -119,7 +119,7 @@ void concatenate()
     char Word2[100];
     printf("Please enter the first word: ");
     
-    // Avoid inpuuts of more than 99 characters
+    // Avoid inputs of more than 99 characters
     scanf(" %99s", Word1);
     printf("Please enter the second word: ");
     scanf(" %99s", Word2);
@@ -131,7 +131,7 @@ void concatenate()
 }
 
 
-// MAIN FUNTION
+// MAIN FUNCTION
 int main()
 {
     int Selection[2];
@@ -143,7 +143,7 @@ int main()
 
     while (Execution)
     {
-        printf("\n\nPlease enter the number of the action you preferr to execute:\n1 - Determine if a value is a valid IPv4 IP\n2 - Convert a number to ASCII\n3 - Generate a random number between 1 and 6\n4 - Concatenate two words\nAny other key - Exit the script.\n\n-> ");
+        printf("\n\nPlease enter the number of the action you prefer to execute:\n1 - Determine if a value is a valid IPv4 IP\n2 - Convert a number to ASCII\n3 - Generate a random number between 1 and 6\n4 - Concatenate two words\nAny other key - Exit the script.\n\n-> ");
     
         scanf(" %d", Selection);
         
