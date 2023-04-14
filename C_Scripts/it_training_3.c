@@ -11,17 +11,28 @@
 #include <stdio.h> // Functions printf(),scanf(),putchar(),fgets(),sizeof(),fflush()
 #include <stdlib.h> // Functions system(),
 #include <ctype.h> // Functions tolower(),toupper()
+#include <string.h> // Functions strlen()
 
 // Function 1. ToLower
 void ToLower()
 {
     fflush(stdin);
+
+    // # Option 1
+    // char StringToWorkWith[100];
+    // int n = sizeof(StringToWorkWith);
+    // printf("\nType the word you want to change to lowercase (maximum of 100 characters): ");
+    // fgets( StringToWorkWith, n, stdin);
+    // for (int i = 0; i < n; i++)
+    // {
+    //     putchar(tolower(StringToWorkWith[i]));
+    // }
+    
+    // # Option 2
     int i = 0;
     char StringToWorkWith[100];
-
     printf("\nType the word you want to change to lowercase (maximum of 100 characters): ");
     fgets( StringToWorkWith, sizeof(StringToWorkWith), stdin); 
-
     while (StringToWorkWith[i])
     {
         putchar(tolower(StringToWorkWith[i]));
@@ -122,7 +133,7 @@ int main()
     char WantToContinue = '\0';
 
     system("cls");
-    printf("\nWelcome to algorithm for training session 3.\n");
+    printf("\nWelcome to algorithm for training session 3.");
 
     while (Execution)
     {
